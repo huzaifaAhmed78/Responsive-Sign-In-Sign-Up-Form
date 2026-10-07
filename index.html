@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BlueAuth - Sign In & Sign Up</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="auth-wrapper">
+      <div class="auth-card">
+
+        <!-- Form Section -->
+
+        <section class="form-section">
+          <div class="brand-mini">
+            <div class="logo">Zextra</div>
+          </div>
+
+          <!-- Toggle -->
+          <div class="auth-toggle">
+            <button id="signInTab" class="tab active">Sign In</button>
+
+            <button id="signUpTab" class="tab">Sign Up</button>
+          </div>
+
+          <!-- Message -->
+          <div id="message" class="message"></div>
+
+          <!-- Sign In -->
+          <form id="signInForm" class="auth-form">
+            <div>
+              <h2>Welcome back</h2>
+              <p class="form-subtitle">Sign in to continue to your account.</p>
+            </div>
+
+            <div class="input-group">
+              <label for="loginEmail">Email Address</label>
+
+              <input
+                type="email"
+                id="loginEmail"
+                placeholder="you@example.com"
+              />
+
+              <small class="error" id="loginEmailError"></small>
+            </div>
+
+            <div class="input-group">
+              <label for="loginPassword">Password</label>
+
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="Enter your password"
+                />
+
+                <button
+                  type="button"
+                  class="show-password"
+                  data-target="loginPassword"
+                >
+                  Show
+                </button>
+              </div>
+
+              <small class="error" id="loginPasswordError"></small>
+            </div>
+
+            <button type="submit" class="primary-btn">Sign In</button>
+
+            <p class="switch-text">
+              Don't have an account?
+              <button type="button" id="goToSignUp">Create account</button>
+            </p>
+          </form>
+
+          <!-- Sign Up -->
+          <form id="signUpForm" class="auth-form hidden">
+            <div>
+              <h2>Create account</h2>
+
+              <p class="form-subtitle">Get started by creating your account.</p>
+            </div>
+
+            <div class="input-group">
+              <label for="signupName">Full Name</label>
+
+              <input type="text" id="signupName" placeholder="John Doe" />
+
+              <small class="error" id="signupNameError"></small>
+            </div>
+
+            <div class="input-group">
+              <label for="signupEmail">Email Address</label>
+
+              <input
+                type="email"
+                id="signupEmail"
+                placeholder="you@example.com"
+              />
+
+              <small class="error" id="signupEmailError"></small>
+            </div>
+
+            <div class="input-group">
+              <label for="signupPassword">Password</label>
+
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="signupPassword"
+                  placeholder="Minimum 6 characters"
+                />
+
+                <button
+                  type="button"
+                  class="show-password"
+                  data-target="signupPassword"
+                >
+                  Show
+                </button>
+              </div>
+
+              <small class="error" id="signupPasswordError"></small>
+            </div>
+
+            <div class="input-group">
+              <label for="confirmPassword">Confirm Password</label>
+
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="Confirm your password"
+                />
+
+                <button
+                  type="button"
+                  class="show-password"
+                  data-target="confirmPassword"
+                >
+                  Show
+                </button>
+              </div>
+
+              <small class="error" id="confirmPasswordError"></small>
+            </div>
+
+            <button type="submit" class="primary-btn">Create Account</button>
+
+            <p class="switch-text">
+              Already have an account?
+              <button type="button" id="goToSignIn">Sign in</button>
+            </p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
